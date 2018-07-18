@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpack-encore Training | {% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/global.css') }}" />
+        <link rel="stylesheet" href="{{ asset('assets/main.css') }}" />
+    {% endblock %}
+</head>
+<body>
+
+<!-- Start Top Bar -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text"><a href="/">Webpack Encore</a></li>
+            <li><a href="{{ path('page') }}">Page</a></li>
+            <li><a href="{{ path('form') }}">Form</a></li>
+            <li><a href="{{ path('table') }}">Table</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <div id="global">Change This Text</div>
+    </div>
+</div>
+<!-- End Top Bar -->
+
+<div class="callout large">
+    <div class="row column text-center">
+        <h1>Webpack Encore Training</h1>
+    </div>
+</div>
+
+<section id="content_wrapper">
+    {% block content %}{% endblock %}
+</section>
+
+{% block javascripts %}
+    <script src="{{ asset('assets/runtime.js') }}"></script>
+    <script src="{{ asset('assets/global.js') }}"></script>
+{% endblock %}
+</body>
+</html>

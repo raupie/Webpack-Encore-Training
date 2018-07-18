@@ -1,0 +1,26 @@
+{
+  "name": "webpack-encore-training",
+  "version": "1.0.0",
+  "description": "Webpack Encore Training with Webpack 4.0",
+  "author": "Travis Raup [travis.raup@gmail.com]",
+  "license": "ISC",
+  "devDependencies": {
+    "@symfony/webpack-encore": "git://github.com/symfony/webpack-encore.git#webpack4",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1"
+  },
+  "scripts": {
+    "compile": "yarn run encore dev",
+    "watch": "yarn run encore dev --watch",
+    "build": "yarn run encore production"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "datatables.net-dt": "^1.10.19",
+    "font-awesome": "^4.7.0",
+    "foundation-sites": "^6.4.4-rc1",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0",
+    "what-input": "^5.1.0"
+  }
+}

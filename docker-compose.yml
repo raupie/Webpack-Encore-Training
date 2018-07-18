@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  webserver:
+    build: ./provisioning/webserver
+    image: ${COMPOSE_PROJECT_NAME}/webserver:1.0
+    working_dir: /var/www/project
+    ports:
+      - '${PORT_PREFIX}080:80'
+    volumes:
+      - ./app:/var/www/project

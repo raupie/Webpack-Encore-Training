@@ -1,0 +1,57 @@
+{% extends 'pagelayout.html.twig' %}
+
+{% block title %}Form{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/form.css') }}" />
+{% endblock %}
+
+{% block javascripts  %}
+    {{ parent() }}
+    <script src="{{ asset('assets/form.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="grid-container">
+        <h1>form.html.twig</h1>
+        <strong>Requirements:</strong>
+        <ol>
+            <li>Load jQuery</li>
+            <li>Load jQuery.validate plugin</li>
+        </ol>
+        <form id="myForm" class="contactForm">
+            <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                    <label>First Name
+                        <input type="text" name="firstname">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Last Name
+                        <input type="text" name="lastname">
+                    </label>
+                </div>
+                <div class="medium-12 cell">
+                    <label>
+                        Address
+                        <textarea name="address"></textarea>
+                    </label>
+                </div>
+                <div class="medium-12 cell">
+                    <label>Favorite Color
+                        <select name="color">
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="medium-12 cell">
+                    <input type="submit" value="Submit" class="button expanded">
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

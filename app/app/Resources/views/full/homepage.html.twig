@@ -1,0 +1,26 @@
+{% extends 'pagelayout.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="grid-container">
+        <h1>Requirements</h1>
+        <ol>
+            <li>Foundation 6</li>
+                <ol>
+                    <li>what-input</li>
+                </ol>
+            <li>Jquery</li>
+                <ol>
+                    <li>jquery-validation</li>
+                </ol>
+            <li>Datatables</li>
+        </ol>
+        <hr/>
+        <ul>
+            <li><a href="{{ path('page') }}">Page: jQuery replace text</a></li>
+            <li><a href="{{ path('form') }}">Form: jQuery form validation</a></li>
+            <li><a href="{{ path('table') }}">Table: Datatables</a></li>
+        </ul>
+    </div>
+{% endblock %}

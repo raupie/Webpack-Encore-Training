@@ -1,0 +1,25 @@
+{% extends 'pagelayout.html.twig' %}
+
+{% block title %}Page{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/page.css') }}" />
+{% endblock %}
+
+{% block javascripts  %}
+    {{ parent() }}
+    <script src="{{ asset('assets/page.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="grid-container">
+        <h1>page.html.twig</h1>
+        <strong>Requirements:</strong>
+        <ol>
+            <li>Load jQuery</li>
+            <li>Replace text in div#page</li>
+        </ol>
+        <div id="page">jquery replace this text</div>
+    </div>
+{% endblock %}
